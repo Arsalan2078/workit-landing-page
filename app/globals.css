@@ -1,12 +1,6 @@
 @import "tailwindcss";
 
 :root {
-  --green: rgb(68, 255, 161);
-  --purple-900: rgb(36, 5, 62);
-  --purple-500: rgb(123, 102, 142);
-  --purple-100: rgb(253, 250, 255);
-  --white: rgb(255, 255, 255);
-
   --font-size-2xl: clamp(3rem, 2.25rem + 3.125vw, 3.75rem);
   --font-size-xl: clamp(2rem, 1rem + 4.1667vw, 3rem);
   --font-size-lg: clamp(1.5rem, 1.25rem + 1.0417vw, 1.75rem);
@@ -14,12 +8,11 @@
 }
 
 @theme inline {
-  --color-*: initial;
-  --color-green: var(--green);
-  --color-purple-900: var(--purple-900);
-  --color-purple-500: var(--purple-500);
-  --color-purple-100: var(--purple-100);
-  --color-white: var(--white);
+  --color-green: rgb(68, 255, 161);
+  --color-purple-900: rgb(36, 5, 62);
+  --color-purple-500: rgb(123, 102, 142);
+  --color-purple-100: rgb(253, 250, 255);
+  --color-white: rgb(255, 255, 255);
 
   --text-*: initial;
   --text-2xl: var(--font-size-2xl);
@@ -70,6 +63,7 @@
   }
 }
 
+/* global typography */
 body {
   @apply font-manrope text-rg leading-180 font-normal;
 }
@@ -87,4 +81,20 @@ h2 {
 h3 {
   @apply font-fraunces text-lg leading-120 font-semibold;
   font-variation-settings: "opsz" 144;
+}
+
+/* anchors with svg */
+a {
+  --_fill-color: var(--fill-color);
+  --fill-color: var(--color-purple-500);
+
+  &:hover,
+  &:focus {
+    --fill-color: var(--color-purple-900);
+  }
+
+  & > svg path {
+    @apply transition ease-out;
+    fill: var(--_fill-color);
+  }
 }
