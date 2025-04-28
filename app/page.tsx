@@ -12,7 +12,7 @@ export default function Home() {
       <header className="flex flex-col bg-purple-100">
         <div className="bg-purple-900 text-white">
           <nav>
-            <div className="container mx-auto flex items-center justify-between px-250 pt-400 md:px-550 lg:px-1000 lg:pt-700">
+            <div className="xl:container mx-auto flex items-center justify-between px-250 pt-400 md:px-550 xl:px-1000 xl:pt-700">
               <Logo logo="light" />
               <ButtonLink href="#" variation="secondary">
                 Apply for access
@@ -20,7 +20,7 @@ export default function Home() {
             </div>
           </nav>
 
-          <div className="mx-auto flex container flex-col items-center gap-500 px-250 pt-700 pb-1800 md:px-550 lg:px-1000">
+          <div className="mx-auto flex xl:container flex-col items-center gap-500 px-250 pt-700 pb-1800 md:px-550 xl:px-1000">
             <h1 className="text-center">
               Data{" "}
               <span className="decoration-green underline decoration-[0.1875rem] underline-offset-[0.375rem]">
@@ -32,30 +32,30 @@ export default function Home() {
           </div>
         </div>
 
-        <div className="mx-auto mt-[-6.5rem] max-w-[48rem] px-350 md:px-550">
+        <div className="mx-auto mt-[-6.5rem] max-w-[32rem] xl:max-w-[48rem] px-350 md:px-550">
           <Image src={imageHero} alt="Hero Image" />
         </div>
       </header>
 
       <main>
         <section className="bg-purple-100">
-          <div className="container mx-auto px-250 py-700 md:px-550 lg:px-1000">
-            <ol className="flex flex-col gap-400 lg:flex-row">
-              <li className="lg:flex-1">
+          <div className="xl:container mx-auto px-250 py-700 md:px-550 xl:px-1000">
+            <ol className="flex flex-col gap-400 xl:flex-row">
+              <li className="xl:flex-1">
                 <SellingPoint
                   counter={1}
                   heading="Actionable insights"
                   paragraph="Optimize your products, improve customer satisfaction and stay ahead of the competition with our product data analytics."
                 />
               </li>
-              <li className="lg:flex-1">
+              <li className="xl:flex-1">
                 <SellingPoint
                   counter={2}
                   heading="Data-driven decisions"
                   paragraph="Make data-driven decisions with our product data analytics Our AI-generated reports help you unlock insights hidden in your product data."
                 />
               </li>
-              <li className="lg:flex-1">
+              <li className="xl:flex-1">
                 <SellingPoint
                   counter={3}
                   heading="Always affordable"
@@ -67,12 +67,12 @@ export default function Home() {
         </section>
 
         <section>
-          <div className="container mx-auto flex flex-col items-center px-250 pt-1400 md:px-550 lg:px-1000">
-            <div className="max-w-[17.5rem] self-start lg:max-w-[29.8125rem]">
+          <div className="xl:container mx-auto flex flex-col items-center px-250 pt-1400 md:px-550 xl:px-1000">
+            <div className="max-w-[17.5rem] md:self-start lg:max-w-[29.8125rem]">
               <Image src={imageFounder} alt="Image of the founder." />
             </div>
 
-            <div className="mt-[-3rem] lg:mt-[-19.3125rem] lg:max-w-[45.625rem] flex flex-col items-center gap-400 self-end bg-purple-900 p-400 text-center text-white md:mt-[-7rem] md:max-w-[31.5rem] md:items-start md:p-[3rem] md:text-start lg:p-800">
+            <div className="mt-[-3rem] lg:mt-[-19.3125rem] xl:max-w-[45.625rem] flex flex-col items-center gap-400 md:self-end bg-purple-900 p-400 text-center text-white md:mt-[-7rem] md:max-w-[31.5rem] md:items-start md:p-[3rem] md:text-start xl:p-800">
               <h2>Be the first to test</h2>
 
               <p>
@@ -89,7 +89,7 @@ export default function Home() {
       </main>
 
       <footer>
-        <div className="container mx-auto flex flex-col items-center gap-700 p-1000 lg:py-1400">
+        <div className="xl:container mx-auto flex flex-col items-center gap-700 p-1000 xl:py-1400">
           <Logo />
           <ul className="flex items-stretch justify-center gap-350">
             <li className="flex">

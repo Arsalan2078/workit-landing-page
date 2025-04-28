@@ -10,7 +10,8 @@
 @theme inline {
   --breakpoint-*: initial;
   --breakpoint-md: 48rem;
-  --breakpoint-lg: 80rem;
+  --breakpoint-lg: 64rem;
+  --breakpoint-xl: 80rem;
 
   --color-*: initial;
   --color-green: rgb(68, 255, 161);
@@ -103,4 +104,8 @@ a {
     @apply transition ease-out;
     fill: var(--fill-color);
   }
+}
+
+.container {
+  width: min(100%, 80rem);
 }
