@@ -8,6 +8,10 @@
 }
 
 @theme inline {
+  --breakpoint-*: initial;
+  --breakpoint-md: 48rem;
+  --breakpoint-lg: 80rem;
+
   --color-*: initial;
   --color-green: rgb(68, 255, 161);
   --color-purple-900: rgb(36, 5, 62);
