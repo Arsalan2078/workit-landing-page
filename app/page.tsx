@@ -1,18 +1,22 @@
 import Image from "next/image";
 import ButtonLink from "./components/ButtonLink";
 import Logo from "./components/Logo";
+import SkipLinks from "./components/SkipLinks";
 import SellingPoint from "./components/SellingPoint";
 
 import imageHero from "@/public/image-hero.webp";
 import imageFounder from "@/public/image-founder.webp";
-import SkipLinks from "./components/SkipLinks";
+
+import bgPattern1 from "@/public/bg-pattern-1.svg";
+import bgPattern2 from "@/public/bg-pattern-2.svg";
+import bgPattern3 from "@/public/bg-pattern-3.svg";
 
 export default function Home() {
   return (
-    <div className="relative flex flex-col text-purple-900">
+    <div className="relative flex flex-col overflow-x-hidden text-purple-900">
       <SkipLinks />
       <header id="top" className="flex flex-col bg-purple-100">
-        <div className="bg-purple-900 text-white">
+        <div className="relative z-0 bg-purple-900 text-white">
           <nav>
             <div className="mx-auto flex items-center justify-between px-250 pt-400 md:px-550 xl:container xl:px-1000 xl:pt-700">
               <Logo logo="light" />
@@ -23,7 +27,7 @@ export default function Home() {
           </nav>
 
           <div
-            className="mx-auto flex flex-col items-center gap-500 px-250 pt-700 pb-1800 md:px-550 xl:container xl:px-1000"
+            className="mx-auto flex flex-col items-center gap-500 px-250 pt-700 pb-1800 xl:pb-[18.5rem] md:px-550 xl:container xl:px-1000"
             id="introduction"
           >
             <h1 className="text-center">
@@ -35,9 +39,16 @@ export default function Home() {
             </h1>
             <ButtonLink href="#">Learn more</ButtonLink>
           </div>
+
+          <div className="absolute hidden md:top-[3.5rem] md:left-[-14rem] md:block xl:top-[5rem] xl:left-[-6.5rem]">
+            <Image src={bgPattern1} alt="" />
+          </div>
+          <div className="absolute hidden md:right-[-4rem] md:bottom-[2rem] md:block xl:right-[-3rem] xl:bottom-[12rem]">
+            <Image src={bgPattern2} alt="" />
+          </div>
         </div>
 
-        <div className="mx-auto mt-[-6.5rem] max-w-[32rem] px-350 md:px-550 xl:max-w-[48rem]">
+        <div className="z-10 mx-auto mt-[-6.5rem] max-w-[32rem] xl:mt-[-15rem] px-350 md:px-550 xl:max-w-[48rem]">
           <Image src={imageHero} alt="Hero Image" />
         </div>
       </header>
@@ -77,7 +88,7 @@ export default function Home() {
               <Image src={imageFounder} alt="Image of the founder." />
             </div>
 
-            <div className="mt-[-3rem] flex flex-col items-center gap-400 bg-purple-900 p-400 text-center text-white md:mt-[-7rem] md:max-w-[31.5rem] md:items-start md:self-end md:p-[3rem] md:text-start lg:mt-[-19.3125rem] xl:max-w-[45.625rem] xl:p-800">
+            <div className="relative mt-[-3rem] flex flex-col items-center gap-400 bg-purple-900 p-400 text-center text-white md:mt-[-7rem] md:max-w-[31.5rem] md:items-start md:self-end md:p-[3rem] md:text-start lg:mt-[-19.3125rem] xl:max-w-[45.625rem] xl:p-800">
               <h2>Be the first to test</h2>
 
               <p>
@@ -88,6 +99,10 @@ export default function Home() {
               </p>
 
               <ButtonLink href="#">Apply for access</ButtonLink>
+
+              <div className="absolute hidden md:top-[75%] md:right-[0%] md:block xl:top-[62.5%] xl:right-[10%]">
+                <Image src={bgPattern3} alt="" />
+              </div>
             </div>
           </div>
         </section>

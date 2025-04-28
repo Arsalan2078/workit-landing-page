@@ -1,13 +1,6 @@
 @import "tailwindcss";
 
-:root {
-  --font-size-2xl: clamp(3rem, 2.25rem + 3.125vw, 3.75rem);
-  --font-size-xl: clamp(2rem, 1rem + 4.1667vw, 3rem);
-  --font-size-lg: clamp(1.5rem, 1.25rem + 1.0417vw, 1.75rem);
-  --font-size-rg: 1rem;
-}
-
-@theme inline {
+@theme {
   --breakpoint-*: initial;
   --breakpoint-md: 48rem;
   --breakpoint-lg: 64rem;
@@ -21,10 +14,10 @@
   --color-white: rgb(255, 255, 255);
 
   --text-*: initial;
-  --text-2xl: var(--font-size-2xl);
-  --text-xl: var(--font-size-xl);
-  --text-lg: var(--font-size-lg);
-  --text-rg: var(--font-size-rg);
+  --text-2xl: clamp(3rem, 2.1429rem + 3.5714vw, 5rem);
+  --text-xl: clamp(2rem, 1.3571rem + 2.6786vw, 3.5rem);
+  --text-lg: clamp(1.5rem, 1.2857rem + 0.8929vw, 2rem);
+  --text-rg: clamp(1rem, 0.9464rem + 0.2232vw, 1.125rem);
 
   --font-weight-*: initial;
   --font-weight-normal: 400;
@@ -59,15 +52,6 @@
   --spacing-200: 1rem;
   --spacing-150: 0.75rem;
   --spacing-100: 0.5rem;
-}
-
-@media screen and (min-width: 768px) {
-  :root {
-    --text-2xl: clamp(3.75rem, 2.5rem + 5.2083vw, 5rem);
-    --text-xl: clamp(3rem, 2.5rem + 2.0833vw, 3.5rem);
-    --text-lg: clamp(1.75rem, 1.5rem + 1.0417vw, 2rem);
-    --text-rg: clamp(1rem, 0.875rem + 0.5208vw, 1.125rem);
-  }
 }
 
 /* global typography */
