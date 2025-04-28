@@ -5,14 +5,16 @@ import SellingPoint from "./components/SellingPoint";
 
 import imageHero from "@/public/image-hero.webp";
 import imageFounder from "@/public/image-founder.webp";
+import SkipLinks from "./components/SkipLinks";
 
 export default function Home() {
   return (
-    <div className="text-purple-900">
-      <header className="flex flex-col bg-purple-100">
+    <div className="relative flex flex-col text-purple-900">
+      <SkipLinks />
+      <header id="top" className="flex flex-col bg-purple-100">
         <div className="bg-purple-900 text-white">
           <nav>
-            <div className="xl:container mx-auto flex items-center justify-between px-250 pt-400 md:px-550 xl:px-1000 xl:pt-700">
+            <div className="mx-auto flex items-center justify-between px-250 pt-400 md:px-550 xl:container xl:px-1000 xl:pt-700">
               <Logo logo="light" />
               <ButtonLink href="#" variation="secondary">
                 Apply for access
@@ -20,7 +22,10 @@ export default function Home() {
             </div>
           </nav>
 
-          <div className="mx-auto flex xl:container flex-col items-center gap-500 px-250 pt-700 pb-1800 md:px-550 xl:px-1000">
+          <div
+            className="mx-auto flex flex-col items-center gap-500 px-250 pt-700 pb-1800 md:px-550 xl:container xl:px-1000"
+            id="introduction"
+          >
             <h1 className="text-center">
               Data{" "}
               <span className="decoration-green underline decoration-[0.1875rem] underline-offset-[0.375rem]">
@@ -32,14 +37,14 @@ export default function Home() {
           </div>
         </div>
 
-        <div className="mx-auto mt-[-6.5rem] max-w-[32rem] xl:max-w-[48rem] px-350 md:px-550">
+        <div className="mx-auto mt-[-6.5rem] max-w-[32rem] px-350 md:px-550 xl:max-w-[48rem]">
           <Image src={imageHero} alt="Hero Image" />
         </div>
       </header>
 
       <main>
-        <section className="bg-purple-100">
-          <div className="xl:container mx-auto px-250 py-700 md:px-550 xl:px-1000">
+        <section className="bg-purple-100" id="section-selling-points">
+          <div className="mx-auto px-250 py-700 md:px-550 xl:container xl:px-1000">
             <ol className="flex flex-col gap-400 xl:flex-row">
               <li className="xl:flex-1">
                 <SellingPoint
@@ -66,13 +71,13 @@ export default function Home() {
           </div>
         </section>
 
-        <section>
-          <div className="xl:container mx-auto flex flex-col items-center px-250 pt-1400 md:px-550 xl:px-1000">
+        <section id="section-founder">
+          <div className="mx-auto flex flex-col items-center px-250 pt-1400 md:px-550 xl:container xl:px-1000">
             <div className="max-w-[17.5rem] md:self-start lg:max-w-[29.8125rem]">
               <Image src={imageFounder} alt="Image of the founder." />
             </div>
 
-            <div className="mt-[-3rem] lg:mt-[-19.3125rem] xl:max-w-[45.625rem] flex flex-col items-center gap-400 md:self-end bg-purple-900 p-400 text-center text-white md:mt-[-7rem] md:max-w-[31.5rem] md:items-start md:p-[3rem] md:text-start xl:p-800">
+            <div className="mt-[-3rem] flex flex-col items-center gap-400 bg-purple-900 p-400 text-center text-white md:mt-[-7rem] md:max-w-[31.5rem] md:items-start md:self-end md:p-[3rem] md:text-start lg:mt-[-19.3125rem] xl:max-w-[45.625rem] xl:p-800">
               <h2>Be the first to test</h2>
 
               <p>
@@ -88,8 +93,8 @@ export default function Home() {
         </section>
       </main>
 
-      <footer>
-        <div className="xl:container mx-auto flex flex-col items-center gap-700 p-1000 xl:py-1400">
+      <footer id="bottom">
+        <div className="mx-auto flex flex-col items-center gap-700 p-1000 xl:container xl:py-1400">
           <Logo />
           <ul className="flex items-stretch justify-center gap-350">
             <li className="flex">
